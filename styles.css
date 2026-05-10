@@ -477,15 +477,24 @@ label {
 /* ─── RESPONSIVE ─── */
 @media(max-width:900px) {
     nav {
-        padding: 16px 24px;
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
     }
 
     section {
-        padding: 72px 24px;
+        padding: 60px 20px;
     }
 
     .about-inner {
@@ -527,6 +536,32 @@ label {
     }
 
     .hero h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+    }
+
+    .hero-cta {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn-gold, .btn-outline {
+        width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .about h2, .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .reservation-form-container, .auth-container {
+        padding: 30px 20px;
+        margin: 20px;
     }
 }

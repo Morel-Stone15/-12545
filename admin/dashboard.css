@@ -142,6 +142,33 @@ tr:hover {
 }
 
 /* Scrollbar styling */
-::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg-dark); }
 ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px) {
+    .admin-dashboard {
+        margin: 160px 20px 60px;
+        padding: 20px;
+    }
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:600px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    th, td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-gold {
+        width: 100%;
+        text-align: center;
+    }
+}

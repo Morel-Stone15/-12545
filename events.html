@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - Prestige Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="events.html">Événements</a></li>
+            <li><a href="reservations.html">Réservations</a></li>
+            <li><a href="tickets.html">Billetterie</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li id="admin-link" style="display:none"><a href="admin/dashboard.html" class="btn-outline" style="padding: 8px 20px; font-size: 0.8rem; border-radius: 30px;">⚙️ Espace Admin</a></li>
+        </ul>
+    </nav>
+
+    <section class="evenements" style="margin-top: 80px;">
+        <div class="section-header reveal visible">
+            <span class="section-tag">Actualités</span>
+            <h2>Événements à Venir</h2>
+        </div>
+        <div class="card-container">
+            <div class="event-card reveal visible">
+                <div class="event-img" style="background-image: url('WhatsApp Image 2026-05-09 at 23.27.55.jpeg');"></div>
+                <div class="event-info">
+                    <span class="event-date">24 Décembre 2025</span>
+                    <h3>Gala de Charité d'Hiver</h3>
+                    <p>Une soirée de prestige au profit des œuvres locales. Tenue de soirée exigée.</p>
+                    <a href="tickets.html" style="color: var(--gold); font-size: 0.9rem;">Réserver son billet →</a>
+                </div>
+            </div>
+            <div class="event-card reveal visible">
+                <div class="event-img" style="background-image: url('WhatsApp Image 2026-05-09 at 23.27.56.jpeg');"></div>
+                <div class="event-info">
+                    <span class="event-date">15 Janvier 2026</span>
+                    <h3>Lancement Collection "Or"</h3>
+                    <p>Découvrez nos nouvelles pièces exclusives pour vos futurs événements.</p>
+                    <a href="reservations.html" style="color: var(--gold); font-size: 0.9rem;">Plus d'infos →</a>
+                </div>
+            </div>
+            <!-- Additional dynamic events could be loaded here via Supabase -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-copy">&copy; 2026 Prestige Event. Tous droits réservés.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

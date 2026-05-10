@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès Administrateur - Prestige Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 100px auto;
+            background: var(--dark-accent);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+        .auth-container h2 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .auth-container p {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Retour à l'Accueil</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container reveal visible">
+        <h2>Accès Administrateur</h2>
+        <p>Saisissez la clé secrète pour accéder au tableau de bord.</p>
+        
+        <form id="admin-upgrade-form">
+            <div class="form-group">
+                <label>Clé Secrète</label>
+                <input type="password" id="admin-master-key" placeholder="••••••••••••" required>
+            </div>
+            <button type="submit" class="btn-gold" style="width: 100%; cursor: pointer;">Accéder au Dashboard</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

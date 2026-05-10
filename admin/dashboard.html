@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin – Prestige Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../events.html">Événements</a></li>
+            <li><a href="../reservations.html">Réservations</a></li>
+            <li><a href="../tickets.html">Billetterie</a></li>
+            <li><a href="../login.html">Connexion</a></li>
+            <li id="admin-link" style="display:none"><a href="dashboard.html" title="Administration Administrateur">⚙️ Admin</a></li>
+        </ul>
+    </nav>
+
+    <section class="admin-dashboard reveal visible">
+        <div class="section-header">
+            <span class="section-tag">Portail Sécurisé</span>
+            <h2>Tableau de bord Administrateur</h2>
+        </div>
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Total réservations</h3>
+                <p id="total-reservations">0</p>
+            </div>
+            <div class="card">
+                <h3>Montant total (€)</h3>
+                <p id="total-paid">0</p>
+            </div>
+        </div>
+        <div class="reservation-table-container">
+            <table class="reservation-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Client</th>
+                        <th>Type</th>
+                        <th>Date</th>
+                        <th>Invités</th>
+                        <th>Budget (€)</th>
+                        <th>Statut</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="reservation-body">
+                    <!-- Rows injected by admin.js -->
+                </tbody>
+            </table>
+        </div>
+        <div class="dashboard-actions">
+            <button id="export-csv" class="btn-gold">Exporter CSV</button>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

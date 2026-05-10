@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Prestige Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .auth-container {
+            max-width: 450px;
+            margin: 100px auto;
+            background: var(--dark-accent);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+        .auth-container h2 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .toggle-link a {
+            color: var(--gold);
+        }
+        #mfa-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+        </ul>
+    </nav>
+
+    <div class="auth-container reveal visible">
+        <div id="login-section">
+            <h2>Connexion Client</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="login-email" placeholder="votre@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; cursor: pointer;">Se Connecter</button>
+            </form>
+            <div class="toggle-link">
+                Pas encore de compte ? <a href="signup.html">S'inscrire</a>
+            </div>
+        </div>
+
+        <div id="mfa-section">
+            <h2>Double Authentification</h2>
+            <p style="text-align: center; margin-bottom: 20px; color: var(--text-muted);">Un code a été envoyé à votre application d'authentification.</p>
+            <form id="mfa-form">
+                <div class="form-group">
+                    <label>Code de Vérification</label>
+                    <input type="text" id="mfa-code" placeholder="123456" maxlength="6" required>
+                </div>
+                <button type="submit" class="btn-gold" style="width: 100%; cursor: pointer;">Vérifier</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

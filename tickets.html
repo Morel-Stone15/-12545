@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetterie - Prestige Event</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="events.html">Événements</a></li>
+            <li><a href="tickets.html">Billetterie</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li id="admin-link" style="display:none"><a href="admin/dashboard.html" class="btn-outline" style="padding: 8px 20px; font-size: 0.8rem; border-radius: 30px;">⚙️ Espace Admin</a></li>
+        </ul>
+    </nav>
+
+    <section class="billetterie" style="margin-top: 80px;">
+        <div class="section-header reveal visible">
+            <span class="section-tag">Accès</span>
+            <h2>Billetterie en Ligne</h2>
+        </div>
+        <div class="card-container">
+            <div class="service-card reveal visible" style="text-align: center;">
+                <h3>Pass Standard</h3>
+                <p style="font-size: 2rem; color: var(--gold); margin: 15px 0;">100 000 FCFA</p>
+                <ul style="margin-bottom: 20px; color: var(--text-muted);">
+                    <li>Accès général</li>
+                    <li>Cocktail de bienvenue</li>
+                </ul>
+                <button class="btn-outline buy-ticket" data-ticket="Pass Standard" data-price="100 000 FCFA">Acheter</button>
+            </div>
+            <div class="service-card reveal visible" style="text-align: center; border-color: var(--gold);">
+                <h3>Pass Prestige</h3>
+                <p style="font-size: 2rem; color: var(--gold); margin: 15px 0;">250 000 FCFA</p>
+                <ul style="margin-bottom: 20px; color: var(--text-muted);">
+                    <li>Accès VIP & Lounge</li>
+                    <li>Open Bar & Buffet</li>
+                    <li>Parking Réservé</li>
+                </ul>
+                <button class="btn-gold buy-ticket" data-ticket="Pass Prestige" data-price="250 000 FCFA">Acheter</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

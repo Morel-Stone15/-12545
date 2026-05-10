@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration API - Prestige Event</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Josefin+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .config-container {
+            max-width: 600px;
+            margin: 100px auto;
+            background: var(--navy-light);
+            padding: 50px;
+            border-radius: 8px;
+            border: 1px solid var(--gold);
+        }
+
+        .config-container h1 {
+            color: var(--gold);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .status-msg {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">Prestige <span>Event</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Retour au site</a></li>
+        </ul>
+    </nav>
+
+    <div class="config-container">
+        <h1>Configuration Supabase</h1>
+        <form id="config-form">
+            <div class="form-group">
+                <label>Supabase URL</label>
+                <input type="text" id="supabase-url" placeholder="https://your-project.supabase.co" required>
+            </div>
+            <div class="form-group">
+                <label>Supabase Anon Key</label>
+                <input type="password" id="supabase-key" placeholder="votre-cle-anonyme" required>
+            </div>
+            <div class="form-group">
+                <label>Numéro WhatsApp Admin</label>
+                <input type="text" id="admin-whatsapp" placeholder="+241 077 64 30 15" required>
+            </div>
+            <button type="submit" class="btn-gold" style="width: 100%; cursor: pointer;">Sauvegarder la
+                Configuration</button>
+        </form>
+        <div id="status" class="status-msg"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('config-form');
+            const status = document.getElementById('status');
+
+            // Load existing
+            document.getElementById('supabase-url').value = localStorage.getItem('SUPABASE_URL') || '';
+            document.getElementById('supabase-key').value = localStorage.getItem('SUPABASE_KEY') || '';
+            document.getElementById('admin-whatsapp').value = localStorage.getItem('ADMIN_WHATSAPP') || '';
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const url = document.getElementById('supabase-url').value;
+                const key = document.getElementById('supabase-key').value;
+                const whatsapp = document.getElementById('admin-whatsapp').value;
+
+                localStorage.setItem('SUPABASE_URL', url);
+                localStorage.setItem('SUPABASE_KEY', key);
+                localStorage.setItem('ADMIN_WHATSAPP', whatsapp);
+
+                status.style.display = 'block';
+                status.style.background = 'rgba(0, 255, 0, 0.1)';
+                status.style.color = '#00ff00';
+                status.textContent = 'Configuration sauvegardée avec succès !';
+            });
+        });
+    </script>
+</body>
+
+</html>
